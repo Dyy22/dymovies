@@ -1,3 +1,11 @@
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+
 $('.search-button').on('click', function() {
     $.ajax({
         url: 'https://www.omdbapi.com/?apikey=1aaf6ab3&s=' + $('.input-keyword').val(),
